@@ -1,0 +1,16 @@
+测验
+2019年9月18日16:18
+参与人:李淼新
+1.一个完整的JavaScript结构包括哪些部分?
+答:ECMAScript DOM BOM
+
+2.JavaScript脚本分成哪几种?
+答:外部链接 内联
+
+3.JavaScript错误有哪几种?特点是什么?
+答:类型错误 符号错误 代码错误
+
+4.JavaScript的数据类型包括什么?分别写出.
+答: 基础类型和复杂类型
+基础类型:number bool string null undefined
+复杂类型:object
