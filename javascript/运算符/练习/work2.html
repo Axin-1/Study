@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<!-- 3.8妇女节,该饭店对女性顾客5折优惠,其他顾客不优惠.
+    对优惠和不优惠的顾客分别显示弹窗. -->
+    <input type="date" id="d">
+    <script>
+        var nw = confirm("女王请点确定");
+        //console.log(nw);
+        
+        d.oninput=function(){
+            nw&&d.value=='2019-03-08'?alert(d.value + '女王5折优惠'):alert(d.value + '不优惠');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div id='show'></div>
+    <input type="text" id="in1" placeholder="请输入数字">+
+    <input type="text" id="in2" placeholder="请输入数字">=
+    <button id="btn">结果</button>
+    <script>
+        var in1 = document.getElementById('in1');
+        var in2 = document.getElementById('in2');
+        var btn = document.getElementById('btn');
+        btn.onclick=function(){
+        	if(!Number(in1.value)||!Number(in2.value)){
+        		alert("请输入数字！")
+        	}else{
+        		var a = Number(in1.value)
+                var b = Number(in2.value);
+                show.innerHTML = parseInt(a+b);
+        	}
+           
+         }
+    </script>
+</body>
+</html>
