@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div id="mydiv" class="box" data-lj="yes">suibian</div>
+    <a href="http://www.baidu.com"></a>
+    <script>
+        var div = document.getElementById('mydiv');
+        var a = document.getElementsByTagName('a');
+        //获取元素属性
+                       //找    属性   （属性名）
+        console.log(div.getAttribute('data-lj'));
+        console.log(a[0].getAttribute('href'));
+    </script>
+</body>
+</html>

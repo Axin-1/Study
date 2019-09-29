@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+     .a{
+         width:200px;
+         height:200px;
+     }
+     .b{
+         background-color:pink;
+     }
+     .c{
+         border-radius: 20%;
+     }
+     .d{
+         background-color:aqua;
+     }
+    </style>
+</head>
+<body>
+    <div id="mydiv" class="a b c">你好你好</div>
+    <script>
+        var div = document.getElementById('mydiv');
+        console.log(div.className);
+        div.className='d a c';
+        console.log(div.className);
+    </script>
+</body>
+</html>

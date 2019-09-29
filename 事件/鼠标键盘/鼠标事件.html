@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #box{
+            width:300px;
+            height:400px;
+            background-color:blue;
+            margin:0 auto;
+        }
+        #mydiv{
+            width:100px;
+            height:100px;
+            background-color: rgb(190, 124, 124);
+            color:white;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <div id="mydiv"></div>
+    </div>
+    <script>
+        var mydiv = document.getElementById('mydiv');
+        var box = document.getElementById('box');
+
+        //点击事件
+        // mydiv.onclick = function(){
+        //     alert('点击事件');
+        // }
+
+        //双击事件
+        // mydiv.ondblclick = function(){
+        //     alert('双击事件');
+        // }
+
+        //鼠标按下
+        // mydiv.onmousedown = function(){
+        //     mydiv.innerHTML = '鼠标按下事件';
+        // }
+
+        //鼠标抬起
+        // mydiv.onmouseup = function(){
+        //     mydiv.innerHTML = '';
+        // }
+
+         //鼠标移动
+         //需要注意的是只要鼠标移动就触发
+        //  document.onmousemove = function(){
+        //      console.log('移动了');
+        //  }
+        //  mydiv.onmousemove = function(){
+        //      console.log('在div移动');
+        //  }
+
+        //鼠标移入
+        //会触发冒泡（从内逐级向外依次触发）
+        //会触发多次，取决于嵌套和鼠标位置
+        // mydiv.onmouseover = function(){
+        //     console.log('红')
+        // }
+        // box.onmouseover = function(){
+        //     console.log('蓝')
+        // }
+
+        //不会触发多次
+        mydiv.onmouseenter = function(){
+            console.log('哈哈')
+        }
+        box.onmouseenter = function(){
+            console.log('呵呵')
+        }
+
+        //鼠标移出
+        //会触发多次，取决于嵌套和鼠标位置
+        // mydiv.onmouseout = function(){
+        //     console.log('离开红')
+        // }
+        // box.onmouseout = function(){
+        //     console.log('离开蓝')
+        // }
+
+        //不会触发多次
+        mydiv.onmouseleave = function(){
+            console.log('离开红')
+        }
+        box.onmouseleave = function(){
+            console.log('离开蓝')
+        }
+       
+    </script>
+</body>
+</html>

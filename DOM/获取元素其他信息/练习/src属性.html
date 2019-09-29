@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        div{
+            width:100px;
+            background-color: grey;
+        }
+    </style>
+</head>
+<body>
+    <img src="../a1.jpg" alt="">
+    <div>动图</div>
+    <br>
+    <br>
+    <div>动图</div>
+    <img src="../a2.gif" alt="">
+    <script>
+        var imgs = document.getElementsByTagName('img');
+        var img1s = imgs[0].getAttribute('src');
+        var img2s = imgs[1].getAttribute('src');
+        console.log(img1s.indexOf('j'));
+    </script>
+</body>
+</html>

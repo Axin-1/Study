@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="h"></h1>
+    <ul id="ul"></ul>
+    <script>
+        //获取h1标签
+        var h=document.getElementById('h');
+        //创建a标签
+        var a=document.createElement('a');
+        //把a放到h1标签里
+        h.appendChild(a);
+        
+        //body里创建一个p标签
+        var p = document.createElement('p');
+        document.body.appendChild(p);
+        //创建span标签放在p标签
+        var span = document.createElement('span');
+        p.appendChild(span);
+
+        //获取ul
+        var ul = document.getElementById('ul');
+        //for循环 添加li
+        for(var i=1;i<4;i++){
+            //创建li
+            var li = document.createElement('li');
+            //放入ul里
+            ul.appendChild(li);
+        }
+        
+    </script>
+</body>
+</html>

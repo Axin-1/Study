@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div id="show"></div>
+    <input type="text" id="in1">
+    <button id="btn">anniu</button>
+    <script>
+        //将内容显示在页面上
+       var a = '34854';
+       show.innerHTML = a;
+       // document.write(a); //不要用
+
+       var in1 = document.getElementById('in1');
+       var btn = document.getElementById('btn');
+       btn.onclick=function(){
+           console.log(in1.value);
+           show.innerHTML = in1.value;
+       }
+    </script>
+</body>
+</html>

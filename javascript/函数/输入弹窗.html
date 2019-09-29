@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       var a = Number(prompt('请输入第一个数字'));
+       var b = Number(prompt('请输入第二个数字'));
+       var c = prompt('请输入运算方式(+ - / *)');
+       function test(){
+       	alert(c=='+' ? a+b : c=='-' ? a-b : c=='*' ? a*b : c=='/' ? a/b : '请输入正确的运算方式');
+       }
+       test();
+    </script>
+</body>
+</html>

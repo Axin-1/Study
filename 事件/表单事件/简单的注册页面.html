@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>#div {
+	width: 500px;
+	height: 400px;
+	background-color: lightgrey;
+	margin: 0 auto;
+	padding: 150px 0 0 100px;
+}
+
+#in2 {
+	margin: 20px 0 20px 0;
+}
+
+#btn {
+	width: 150px;
+	height: 30px;
+	margin-left: 60px;
+}
+
+span {
+	color: red;
+}</style>
+</head>
+<body>
+        <!-- 需求2：
+        1.制作一个简单的注册页面
+        2.要求用户名和密码必须写，才可以提交
+        3.提交之后弹出注册成功
+        4.如果有没写的内容，进行提示
+        5.用户准备填写时，在右侧提示该用户名是否可以注册
+        6.一个已经有的用户名库可以用一个数组创建
+        7.已有用户名分别为'tom','jack','lili' -->
+        <div id="div">
+        	输入用户名：<input type="text" id="in1"> <span id="p1"></span>
+		    <br>
+		       请输入密码：<input type="password" id="in2"> <span id="p2"></span>
+		    <br>
+		    <button id="btn">注册</button>
+       </div>
+    <script>
+    	var in1 = document.getElementById('in1');
+		var in2 = document.getElementById('in2');
+		var p1 = document.getElementById('p1');
+		var p2 = document.getElementById('p2');
+		in2.onclick = function(){
+			if(in1.value == ''){
+				p1.innerText = '用户名不能为空';
+			} else if(in1.value == 'tom' || in1.value == 'jack' || in1.value == 'lili') {
+				p1.innerText = '该用户名已被注册';
+			} else {
+				p1.innerText = '该用户名可以使用';
+			}
+		}
+		btn.onclick = function(){
+			//判断用户名框内容
+			if(in1.value == '' || in1.value == 'tom' || in1.value == 'jack' || in1.value == 'lili') {
+				p1.innerText = '请输入用户名';
+				//判断密码框内容
+				return;
+			} else {
+				in1.innerText = '';
+
+			}
+			if(in2.value == ''){
+					p2.innerText = '请输入密码';
+					return;
+				} else {
+					p2.innerText = '';
+				alert('注册成功');
+					
+				}
+		}
+    </script>
+</body>
+</html>
