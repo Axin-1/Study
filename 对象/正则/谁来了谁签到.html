@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+    	#mydiv{
+    		width:200px;
+    		height:50px;
+    		color:red;
+    		font-weight: bold;
+    	}
+    </style>
+</head>
+<body>
+    
+    <div id="di">请输入名字签到：李淼新,刘妍香,小石头,小猪,小胖子</div>
+    <input type="text" id="inp">
+    <div id="mydiv"></div>
+    <button id="btn">签到</button>
+    <button id="btn1">查看谁没来</button>
+    <script> 
+        var inp = document.getElementById('inp');
+        var btn = document.getElementById('btn');
+        var btn1 = document.getElementById('btn1');
+        var mydiv = document.getElementById('mydiv');
+        var arr = '李淼新刘妍香小石头小猪小胖子';
+        var arr1=[];
+
+
+        btn.onclick=function(){
+        	arr1.push(inp.value);
+            console.log(arr1);
+            mydiv.innerHTML = '已签到';
+        }
+        btn1.onclick=function(){
+				var reg = new RegExp(arr1.join('|'),"ig");
+				var val = arr.replace(reg,"");
+				mydiv.innerHTML = '未签到人有:' + val;
+			}
+    </script>
+</body>
+</html>

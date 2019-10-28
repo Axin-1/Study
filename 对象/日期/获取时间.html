@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var time = new Date();
+        console.log('当前日期:'+time.getDate());//获取当前日期
+        console.log('当前月份:'+time.getMonth());//获取当前月份\0-11
+        // 但月份是从0开始的，因此当前月应该是getmouth()+1
+        console.log('当前年份:'+time.getFullYear());//获取当前年份
+        console.log('当前星期几:'+time.getDay());//获取当前是星期三
+        console.log('当前小时:'+time.getHours());//获取当前小时\0-23
+        console.log('当前分钟:'+time.getMinutes());//获取当前分钟\0-59
+        console.log('当前秒:'+time.getSeconds());//获取当前秒\0-59
+        console.log('当前豪秒:'+time.getMilliseconds());//获取当前豪秒\0-999
+    </script>
+</body>
+</html>

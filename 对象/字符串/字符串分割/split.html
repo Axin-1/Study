@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var str = 'jack,tom,lili,mary,lucy,kang,pig,nacy,haha,micra';
+        var n=str.split(',');
+        console.log(n);   
+        // var a=body.Attribute('ul'); 
+        var ul= document.createElement('ul');
+        document.body.appendChild(ul);
+        for(var l=0;l<10;l++){
+            var li=document.createElement('li');
+            ul.appendChild(li);
+            var li=document.getElementsByTagName('li');
+                for(var i=0;i<li.length;i++){
+                    li[i].innerText=n[i];
+                }
+        }
+
+        /*
+        1.在一个字符串中存储10个人名用逗号分隔
+        2.动态创建一个无序列表
+        3.将这10个人分别动态插入到无序列表中
+        */
+    </script>
+</body>
+</html>

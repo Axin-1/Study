@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var str = '2guTFHGU  5H75fnu2';
+        // ^ 匹配开始
+        // $ 匹配结尾
+        var reg = /^\d/;
+        var reg2 = /\d$/;
+        var a = reg.test(str);
+        var b = reg2.test(str);
+        console.log(a);//返回true或者false
+        console.log(b);//返回true或者false
+
+        var str2 ='1a23';
+        // 以数字开头，数字后面是a-z字符，但数字最多出现一次 否则返回false
+        var reg3 = /^\d?[a-z]$/;
+        var a = reg3.test(str2);
+        console.log(a);
+
+
+        // 以字母开头，字母后面是数字，最多出现一次
+        var regg=/^[A-Za-z]\d?$/;
+        var str='a3'
+        console.log(regg.test(str));
+
+
+        // 以字母开头，6位
+        var rega = /^[a-zA-Z]?\w{5}$/;
+        var strr = 'sggvd2';
+        console.log(rega.test(strr));
+
+        // 只能是6位数字 {位数}
+        var reg5 = /^[0-9]{6}$/;
+        var str5 = '123456';
+        console.log(reg5.test(str5));
+        // 6-8位数字 {min, max}
+        var reg6 = /^[0-9]{6,8}$/;
+        var str6 = '123456';
+        console.log(reg6.test(str6));
+
+        // 至少6位，多了不限  {min, }
+        var reg7 = /^[0-9]{6,}$/;
+        var str7 = '123456789';
+        console.log(reg7.test(str7));
+
+        // 匹配汉字/^[\u4e00-\u9fa5]$/
+        var a = /^[\u4e00-\u9fa5]{0,}$/;
+        var st = '汉字';
+        console.log(a.test(st));
+
+        // 中文英文数字下划线：/^[\u4e00-\u9fa5,0-9,a-zA-Z,_]+$/
+        var b = /^[\u4e00-\u9fa5,0-9,a-zA-Z,_]+$/;
+        var s = 'fe哈哈_';
+        console.log(b.test(s));
+
+                 // 15位身份证号或18位身份证号或17位后有一个Xx
+        //身份证号：/(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/
+        //手机号： (\+86|0086)?\s*1[3456789]\d{9}
+        // 换行 \n\s*\r
+        // 空格 /(^\s+)|(\s+$)/
+    </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var srt = 'docmethuEHUgu1546HUf';
+        var reg1 = /u/g;
+        var reg2 = /[u,h,o]/ig;//和
+        var reg2 = /[u|h|o]/ig;//和
+        var reg3 = /[^h,g]/g;
+        console.log(srt.match(reg1));
+        console.log(srt.match(reg2));
+        console.log(srt.match(reg3));
+    </script>
+</body>
+</html>

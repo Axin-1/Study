@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a = 12.345;
+        //上取整
+        console.log(Math.ceil(a));//13
+
+        //下取整
+        console.log(Math.floor(a));//12
+
+        //四舍五入取整
+        console.log(Math.round(a));//12
+
+        //0-max 随机数
+        var b1 = parseInt(Math.random()*(100+1),10);
+        console.log(b1);
+        var b2 = Math.floor(Math.random()*(100+1));//下取整
+        console.log(b2);
+
+        //1-max 随机数
+        var c1 = parseInt(Math.random()*100,10)+1;
+        console.log(c1);
+        var c2 = Math.floor(Math.random()*100)+1;//下取整
+        console.log(c2);
+        var c3 = Math.ceil(Math.random()*100);//上取整
+        console.log(c3);
+    </script>
+</body>
+</html>

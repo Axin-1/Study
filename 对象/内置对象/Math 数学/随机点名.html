@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<style>
+    .mz{
+        width:200px;
+        height:50px;
+        border:2px solid black;
+        font-size:28px;
+        text-align: center;
+        line-height: 50px;
+    }
+</style>
+<body>
+    <div class="mz" id="mz">点击开始</div>
+    <script>
+        var mz = document.getElementById('mz');
+
+        mz.onclick=function(){
+            // 定时器
+            var a=setInterval(tt,200); 
+            mz.onclick=function(){
+            // 清楚定时器    
+               clearInterval(a);
+            }
+        }
+        
+        // 随机点名
+        function timer(){
+            var arr=['闫云龙','李淼新','刘妍香','冀义坤','王书雅','陈莉','陈朝微','老师','石头'];
+            var b1 = parseInt(Math.random()*arr.length);
+            mz.innerHTML=arr[b1];
+        }
+
+        // 随机颜色
+        function tt(){
+             var arr1=['red','purple','orange','green','black','yellow','grey','pink','blue'];
+            var b2=parseInt(Math.random()*arr1.length);
+            document.body.style.background=arr1[b2];
+        }
+       
+
+       
+    </script>
+</body>
+</html>

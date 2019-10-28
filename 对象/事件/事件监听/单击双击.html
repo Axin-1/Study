@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        div{
+            width:200px;
+            height:200px;
+            display: inline-block;
+        }
+        div>img{
+            width:100px;
+            height:100px;
+            padding:50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="d1"><img src="qq.jpg" alt=""></div>
+    <div id="d2"><img src="timg.jpg" alt=""></div>
+    <script>
+        var d1 = document.getElementById('d1');
+        var d2 = document.getElementById('d2');
+        d1.addEventListener('click',a,false);
+        d1.addEventListener('dblclick',c,false);
+        d2.addEventListener('click',a,false);
+        d2.addEventListener('dblclick',d,false);
+
+        function a(){
+            this.style.backgroundColor = 'grey';
+        }
+        function c(){
+            d1.style.backgroundColor = '';
+            alert('欢迎使用qq');
+        }
+        function d(){
+            this.style.backgroundColor = '';
+            alert('欢迎使用qq阅读');
+        }
+    </script>
+</body>
+</html>

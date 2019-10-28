@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Document</title>
+</head>
+<body>
+    请输入编号：<input type="text" id="inp">
+    <button id="btn">登陆</button>
+    <script>
+        //练习
+        /*
+        1.设计一个登陆页面
+        2.需要用户输入他的编号即可完成登陆
+        3.用户编号为8位，如遇该位数没有数字则为0；
+        4.使用补全功能
+        */    
+        var inp=document.getElementById('inp');
+        var btn=document.getElementById('btn');
+        btn.onclick=function(){
+           var str=inp.value.padStart(8,'0');
+           console.log(str);
+           inp.value=str;
+        }
+       
+       
+    </script>
+</body>
+</html>

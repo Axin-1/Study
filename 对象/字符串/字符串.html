@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var s = new String('23415fg1');
+        var a = Number('123');
+        console.log(a);//number
+        //转换为字符串
+        console.log(String(a));//string
+        
+        //从前开始查找
+        console.log(s.indexOf('f'));
+        //从后开始查找
+        console.log(s.lastIndexOf('1'));
+        //下标值对应的内容
+        console.log(s.charAt('2'));
+        //正则表达式 返回一个数组
+        console.log(s.match(/1/g));
+
+        //+直接拼接
+        console.log(s+a);
+        //a.concat(b)
+        console.log(s.concat(a));
+    </script>
+</body>
+</html>

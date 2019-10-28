@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .m-l{
+            float:left;
+            width:200px;
+            height:400px;
+            border:1px solid red;
+        }
+        .m-l>div{
+            display: block;
+            width:40px;
+            height:40px;
+            padding:60px;
+        }
+        #m-r{
+            display: inline-block;
+            width:200px;
+            height:400px;
+            border:1px solid blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="m-l">
+        <div class="l"><img src="m-1.png" id="m1"></div>
+        <div class="r"><img src="c-1.png" id="c1"></div>
+    </div>
+    <div id="m-r"><img src=""></div>
+    <script>
+        var m=m1.getAttribute('src');
+        var c=c1.getAttribute('src');
+        var r=document.getElementById('m-r');
+        m1.onclick=function(){
+            var a=m.replace(1,'0');
+            var mm=m1.setAttribute('src',a);
+            r.innerHTML=mm;
+        }
+        c1.onclick=function(){
+            var b=c.replace(1,'0');
+            var cc=c1.setAttribute('src',b);
+            r.innerHTML=cc;
+        }
+    </script>
+</body>
+</html>

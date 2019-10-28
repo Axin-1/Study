@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var str = 'dcbHNIBVs,哈fcbvh493HU87';
+        var reg = /\d/g;
+        // \d 阿拉伯数字     
+        // \D大写的是反义 非阿拉伯数字
+        var reg2 = /\D/g;
+        // 查找 match
+        console.log(str.match(reg)); 
+        // 替换 replace
+        console.log(str.replace(reg,'*'));//dcbHNIBVs,哈fcbvh***HU**
+        console.log(str.replace(reg2,'*'));//****************493**87
+
+        // \w 字母和字符
+        // \W 大写的是反义 非字母字符
+        var reg3 = /\w/g;
+        var reg4 = /\W/g;
+        console.log(str.replace(reg3,'+'));//+++++++++,哈++++++++++++
+        console.log(str.replace(reg4,'+'));//dcbHNIBVs++fcbvh493HU87
+    
+        // \s 空白字符 制表符 换页符 换行符和其他空格
+        // \S 大写的是反义 非上
+        var reg5 = /\s/g;
+        var reg6 = /\S/g;
+        console.log(str.replace(reg5,'#'));//dcbHNIBVs,哈fcbvh493HU87
+        console.log(str.replace(reg6,'#'));//#######################
+    </script>
+</body>
+</html>
