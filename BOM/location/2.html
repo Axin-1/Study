@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var b=setInterval(function(){
+            var url=location.href;
+            console.log(url);
+            location.href='3.html';
+        },5000)
+        clearInterval(b);
+    </script>
+</body>
+</html>

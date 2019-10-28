@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    #btn{
+        width:150px;
+        height:40px;
+        display: block;
+        background-color:blue;
+        color:white;
+        border:0;
+        margin:10px;
+    }
+    </style>
+</head>
+<body>
+    请输入用户名：<input type="text" id="in1">
+    请输入密码：<input type="password" id="in2">
+    <button id="btn">登陆</button>
+    <script>
+        var in1=document.getElementById('in1');
+        var in2=document.getElementById('in2');
+        var btn=document.getElementById('btn');
+        var num=0;
+        var a = ['123'];
+        btn.onclick = function(){
+            if (in1.value==''&&in2.value=='') {
+			    alert('用户名和密码不可为空');			    
+		    }else if (in1.value=='') {
+                alert('用户名不可为空');
+            } else if (in2.value==''||in2.value!=='123') {
+                alert('请重新输入密码');
+		    }else{
+                location.href=("huan.html?"+in1.value);
+            }
+        }     
+    </script>
+</body>
+</html>

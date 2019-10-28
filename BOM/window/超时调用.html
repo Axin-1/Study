@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // setTimeout(回调函数,时间};    
+        setTimeout(function(){
+            alert('欢迎光临');
+        },2000);
+        // clearInterval(定时器的名字);
+
+        //递归调用
+        function times(){
+            //执行代码
+            console.log('执行的代码段');
+            var tt=setTimeout(function(){
+                times();
+            }, 1000);
+            clearInterval(tt);
+        }
+        //调用
+        times();
+    </script>
+</body>
+</html>

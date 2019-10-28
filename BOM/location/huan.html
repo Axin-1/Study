@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #pic{
+            font-size: 150px;
+        }
+    </style>
+</head>
+<body>
+    <p id="pic"></p>
+    <script>
+        var v =  window.location.search;
+        v = decodeURI(v.substr(1));
+        console.log(v);
+        document.getElementById('pic').innerHTML = '欢迎你,'+v;
+    </script>
+</body>
+</html>

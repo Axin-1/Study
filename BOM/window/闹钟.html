@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <div id="time"></div>
+    <script>
+        var time = document.getElementById('time');
+        setInterval(function(){
+            time.innerHTML = new Date().toLocaleString();
+        },1000)
+        var xiake=new Date('2019/10/14 17:21:30');
+        var num=(xiake.getTime()-time.getTime());
+        console.log(num);
+        var timer=setInterval(function(){
+            num--; 
+            if(num<=0){
+                 time.innerHTML ='下课啦！！';
+                 clearInterval(timer);
+            }
+        },1000);
+    </script>
+</body>
+</html>

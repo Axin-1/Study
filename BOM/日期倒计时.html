@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+ </head>
+ <body>
+     <h1 id='showTime'>
+	 </h1>
+     <script>
+	     function task(){
+		 
+	      //当前时间,
+		   var now=new Date()
+		  //目标时间(劳动节),
+		   var go=new Date('2019/03/21 11:50')
+		  //目标时间减当前时间
+		  var s=parseInt((go.getTime()-now.getTime())/1000)
+		  var d=parseInt(s/(3600*24))//核算天
+		  var h=parseInt(s%(3600*24)/3600)//核算小时
+		  var m=parseInt((s%3600)/60)//核算分钟
+          var s=s%60//核算秒
+		  //不足一天的部分取余
+		  showTime.innerHTML=('距离下课还有:'+d+'天'+h+'小时'+m+'分钟'+s+'秒')
+	     }
+		  setInterval(task,1000)
+		  //定时器让程序每隔一段时间反复执行
+	 </script>
+ </body>
+</html>

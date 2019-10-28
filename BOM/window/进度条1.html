@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+    #box{
+        width:200px;
+        height:30px;
+        border:1px solid black;
+    }
+    #bar{
+        height:30px;
+        width:0;
+        background-color:pink;
+    }
+    </style>
+</head>
+<body>
+    <div id="box"> <div id="bar"></div></div>
+    <script>
+        var box = document.getElementById('box');
+        var bar = document.getElementById('bar');
+        var num = 0;
+        var timer=setInterval(function(){
+            num+=0.1;
+            if(num>100){
+               clearInterval(timer);
+             }else{
+                 bar.style.width=num+'%';
+             }
+           },50) 
+        box.onclick=function(){
+            document.onmousedown = function(e){
+                var ev = e || window.event;
+                //鼠标点击位置的x坐标
+                console.log(box.style.left = ev.clientX + 'px');
+                clearInterval(timer);
+            }
+            bar.style.width=(box.style.left);
+        }
+    </script>
+</body>
+</html>

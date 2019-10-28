@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <button id="a">跳转</button>
+    <script>
+        document.getElementById('a').onclick=function(){
+            //_blank 新窗口打开(默认)
+            window.open('视口大小.html');
+            //_srlf 当前窗口打开
+            window.open('视口大小.html','_self');
+        }
+    </script>
+</body>
+</html>

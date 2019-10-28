@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body{
+            height:400px;
+        }
+    </style>
+</head>
+<body>
+        <button id="b">关闭</button>
+    <script>
+        //可见内容视口(视图)相当于document.body的宽度和高度
+        var w = document.body.clientWidth;    
+        var h = document.body.clientHeight;
+        
+        console.log(w+','+h);
+
+        //浏览器展现区域的宽高,包含滚动条所占区域
+        var wh = window.innerWidth;    
+        var hh = window.innerHeight;
+        
+        console.log(wh+','+hh);
+
+        //整个浏览器在显示屏上所占有的宽度和高度，包含所有
+        var ow = window.outerWidth;
+        var oh = window.outerHeight;
+
+        console.log(ow+','+oh);
+
+        //////////////////////
+         document.getElementById('b').onclick=function(){
+             window.close('视口大小.html');
+         }
+
+    </script>
+</body>
+</html>

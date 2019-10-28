@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <button id="a">跳转</button>
+    <script>
+        //浏览器左边界和上边界到操作系统桌面左上角的水平和垂直距离
+        var x = window.screenX;
+        var y = window.screenY;
+        console.log(x+','+y);
+        document.getElementById('a').onclick=function(){
+            window.open('open.html');
+        }
+        //也就是可用resizeTo或者resizeBy;
+        //改变窗口大小的只是那些用window.open打开的页面.
+        //并且window.open打开的窗口只能有一个tab;
+    </script>
+</body>
+</html>

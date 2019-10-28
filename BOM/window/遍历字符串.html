@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div id="d"></div>
+    <script>
+        var d=document.getElementById('d');
+        var a="hadesfg";
+        var num=0;
+        var time=setInterval(function(){
+            num++;
+            if(num>=a.length){
+                clearInterval(time);
+            }else{
+                d.innerHTML=a[num];
+            }
+        },1000)
+    </script>
+</body>
+</html>

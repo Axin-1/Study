@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #p1{
+            width:200px;
+            height:20px;
+        }
+    </style>
+</head>
+<body>
+    <progress value="0.1" id="p1">
+    <script type="text/javascript">
+        var v=0.1;
+        var p1=document.getElementById("p1");
+        var timer=setInterval(function(){
+            v+=0.1;
+            p1.value=v;
+            if(v==1){
+               clearInterval(timer);
+             }
+           },1000)    
+    </script>
+
+</body>
+</html>
