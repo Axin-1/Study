@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../jquery.js"></script>
+    <style>
+        div{
+            width:100px;
+            height:100px;
+        }
+        .red{
+            background-color:red;
+        }
+        .blue{
+            background-color:blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="red"></div>
+    <script>
+        // toggleClass(属性值) 如果存在就删除一个类，不存在就添加一个类
+       $("div").click(function(){
+           $(this).toggleClass('blue','red');
+       })
+    </script>
+</body>
+</html>

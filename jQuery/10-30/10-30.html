@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <meta charset="UTF-8">
+     <title>Document</title>
+     <script src="../jquery.js"></script>
+     <style>
+     div{
+         width:150px;
+         height:150px;
+         border-radius: 50%;
+         border:3px solid white;
+         background-color: brown;
+     }
+     ul{
+        position:absolute;
+         top:40px;
+         left:150px;
+        display: none;
+     }
+     ul li{
+         display: inline-block;
+         width:60px;
+         height:60px;
+         border-radius:50%;
+         margin-left:15px;
+         border:3px solid white;
+     }
+     /* ul li:hover{
+         //鼠标样式
+         cursor: crosshair;
+     } */
+     ul li:nth-child(1){
+         background-color:burlywood;
+     }
+     ul li:nth-child(2){
+         background-color:coral;
+     }
+     ul li:nth-child(3){
+         background-color:limegreen;
+     }
+     ul li:nth-child(4){
+         background-color:cornflowerblue;
+     }
+     ul li:nth-child(5){
+         background-color:darkorchid;
+     }
+     ul li:nth-child(6){
+         background-color:gold;
+     }
+     ul li:nth-child(7){
+         background-color:lightpink;
+     }
+     </style>
+</head>
+<body>
+    <div></div>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+     <script>
+         var index=0;
+         $("div").click(function(){
+             index++;
+             if(index%2==0){
+                $("li").hide("slow");
+            }else{
+                $("li").show("slow");
+            }
+             $("ul").css("display","block");
+             $("body").css("background",$(this).css("background-color"))
+         })
+         $("li").click(function(){
+             $("body").css("background",$(this).css("background-color"))
+         })
+     </script>
+</body>
+</html>

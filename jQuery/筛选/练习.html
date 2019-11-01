@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <meta charset="UTF-8">
+     <title>Document</title>
+     <script src="../jquery.js"></script>
+     <style>
+         table{
+             border-collapse: collapse;
+         }
+         table tr td{
+             border:1px solid black;
+			 padding:10px 10px;
+         }
+         table tr td:hover{
+             cursor:default;
+         }
+         input{
+         	border:none;
+         	width:30px;
+         	text-align: center;
+         	
+         }
+         input:hover{
+            cursor:default;
+         }
+         .min,.add{
+         	border:1px solid gray;
+         	width:20px;
+         	height:20px;
+         }
+     </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>名称 </td>
+            <td>数量</td>
+            <td>单价</td>
+            <td>合计</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" class="nam">华为mate20 </td>
+            <td id="numb">
+            	<input type="text" class="min" value="-" />
+            	<input type="text" class="tt1" value="0">
+            	<input type="text" class="add" value="+" />
+            </td>
+            <td class="maney">4000</td>
+            <td class="he1"></td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" class="nam">小米8</td>
+            <td id="numb">
+            	<input type="text" class="min" value="-" />
+            	<input type="text" class="tt2" value="0">
+            	<input type="text" class="add" value="+" />
+            </td>
+            <td class="maney">3000</td>
+            <td class="he2"></td>
+        </tr>
+        <tr>
+            <td colspan="2">共<span class="nnn">0</span>件商品</td>
+            <td colspan="2">合计<span class="mmm">0</span>元</td>
+        </tr>
+        
+    </table>
+    
+     <script>
+//   	页面加载
+     	$(function(){
+	     		
+	//   	点击数量＋
+			function jia(){
+	         	var num=parseInt($(this).prev().val())+1;
+	         	if(num==0){return;}
+	         	$(this).prev().val(num);
+	         	var mane=$(this).prev().val()*$(this).parent().next().text();
+	         	$(this).parent().next().next().text(mane);
+	         	
+	         }
+	         $('.add').click(jia);
+	//       点击数量-
+			function jian(){
+				if($(this).next().val()==0){return;}
+	         	var num=parseInt($(this).next().val())-1;
+	         	$(this).next().val(num);
+	         	var mane=$(this).next().val()*$(this).parent().next().text();
+	         	$(this).parent().next().next().text(mane);
+	       }
+			$('.min').click(jian);
+			
+			$(".nam").change(function(){
+				 if ($(".nam").prop("checked")){
+					$(".nnn").text(Number($(".tt1").val())+Number($(".tt2").val()));
+					$(".mmm").text(Number($(".he1").text())+Number($(".he2").text()));
+				 }
+//				 console.log($('.tt1').val())
+			})
+		})
+     </script>
+</body>
+</html>

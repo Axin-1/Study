@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../jquery.js"></script>
+</head>
+<body>
+    <input type="checkbox" name="" id="quan">all  <br>
+    <input type="checkbox" name="ball">足球
+    <input type="checkbox" name="ball">篮球
+    <input type="checkbox" name="ball">排球
+    <script>
+        // 选中复选框为true，没选中为false
+       console.log($("#che").prop("checked"));
+        // .change()改变属性就执行
+        $("#quan").change(function(){
+            // alert($("#quan").prop('checked'));
+            if($("#quan").prop('checked')){
+                $("[name=ball]").prop('checked',true);
+            }else{
+                $("[name=ball]").prop('checked',false);
+            }
+        })
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../jquery.js"></script>
+</head>
+<body>
+    <div id="mydiv"></div>
+    <p class="abc">ppp</p>
+    <img src="img/img-1.jpg" alt="">
+    <a href="http://www.baidu.com">baidu</a>
+    <script>
+        // 获取属性值 .attr("属性名")
+        // 赋予属性值 .attr("属性名","新值")
+        // 赋予多个属性值 .attr({"属性名":"新值","属性名":"新值"})
+        console.log($("p").attr("class"));
+        console.log($("a").attr("href","http://www.taobao.com"));
+        console.log($("img").attr("src"));
+
+        // 删除属性 removeAttr("属性名")
+        console.log($("p").removeAttr("class"));
+
+
+        //点图片 变图
+        var ist=true;
+        $("img").click(function(){
+            $("img").attr("src",function(){
+            //判断
+            if(ist){
+                ist=false;
+                return 'img/img-2.jpg';
+            }else{
+                
+                ist=true;
+                return 'img/img-1.jpg';
+            }
+        });
+        });
+        
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <meta charset="UTF-8">
+     <title>Document</title>
+     <script src="../jquery.js"></script>     
+     <style>
+         div{
+             width:200px;
+             height: 200px;
+             background-color: red;
+             /* margin-left:10px; */
+         }
+         p{
+             width:100px;
+             height:100px;
+             background-color: blue;
+         }
+     </style>
+</head>
+<body>
+    <div>
+        <p></p>
+    </div>
+     <script>
+        //  offset是针对视窗的偏移坐标
+         console.log($("p").offset().left);
+        //.offset({left:10}) 赋予值，需要加{} 不用加px
+         console.log($("p").offset({left:10}));
+     </script>
+</body>
+</html>

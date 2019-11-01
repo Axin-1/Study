@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <meta charset="UTF-8">
+     <title>Document</title>
+     <script src="../jquery.js"></script>
+     <style></style>
+</head>
+<body>
+    <ul>
+        <li>1111</li>
+        <li>2222</li>
+    </ul>
+     <script>
+        //  eq(数字)获取第N个元素 相当于索引 返回对象  
+        //  get(数字)  返回数组 使用get()方法本质上把jQuery对象转换成dom对象
+        // 使用jQuery方法 找元素 尽量使用eq()
+        $("li").eq(0).css('color','red');
+
+        // $("li").get(1).css('color','blue') 报错
+        var a=$("li").get(1);
+        $(a).css('color','blue');
+
+     </script>
+</body>
+</html>

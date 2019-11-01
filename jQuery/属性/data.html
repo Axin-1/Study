@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <meta charset="UTF-8">
+     <title>Document</title>
+     <script src="../jquery.js"></script>
+     <style></style>
+</head>
+<body>
+    <div data-tf="yes" id="a">1111</div>
+    <div data-tf="no" id="b">2222</div>
+     <script>
+         //data() 自定义属性 参数写data- 后面的属性名
+         $("#a").data("li","qq");
+         console.log($("#a").data("li"));//qq
+         console.log($("#b").data("tf"));//no
+
+        //  removeData()参数中写需要删除的data- 属性名
+        console.log($("#a").removeData("tf"));
+     </script>
+</body>
+</html>

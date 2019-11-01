@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <meta charset="UTF-8">
+     <title>Document</title>
+     <script src="../jquery.js"></script>
+     <style></style>
+</head>
+<body>
+    <input type="checkbox" id="hc">
+     <script>
+        //  is()返回值是true或false
+        $('#hc').change(function(){
+            console.log($("#hc").is(":checked"));
+        })
+     </script>
+</body>
+</html>

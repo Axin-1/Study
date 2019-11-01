@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <meta charset="UTF-8">
+     <title>Document</title>
+     <script src="../jquery.js"></script>
+     <style></style>
+</head>
+<body>
+    <ul>
+        <li id="iid">1111</li>
+        <li>2222</li>
+        <li>3333</li>
+        <li>4444</li>
+    </ul>
+     <script>
+         console.log($('ul').children());
+        //  子代
+         console.log($('ul').children("#iid"));
+        //  后代
+         console.log($('ul').find('li'));
+        //  父级
+         console.log($('ul').parent()); 
+        //  祖先
+        console.log($('ul').parents('li'));
+        //  兄弟
+        //  console.log($('li').siblings("li");
+        //  下一个
+        //  console.log($('li').next();
+        //  上一个
+        //  console.log($('li').prev();
+
+     </script>
+</body>
+</html>

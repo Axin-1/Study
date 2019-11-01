@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../jquery.js"></script>
+</head>
+<body>
+    <input type="checkbox"  id="quan">all
+    <input type="checkbox"  id="fan">not <br>
+    <input type="checkbox" name="ball" class="aa">足球
+    <input type="checkbox" name="ball" class="aa">篮球
+    <input type="checkbox" name="ball" class="aa">排球
+    <script>
+        // .change()改变属性就执行
+        $("#quan").change(function(){
+            // alert($("#quan").prop('checked'));
+            if($("#quan").prop('checked')){
+                $("#quan").prop('checked',false);
+                $("#fan").prop('checked',false);
+                $("[name=ball]").prop('checked',true);
+            }
+        })
+        $("#fan").change(function(){
+            if($("#fan").prop('checked',false)){
+                $("#fan").prop('checked',true);
+                $("[name=ball]").prop('checked',false);
+            }
+        })
+        
+    </script>
+</body>
+</html>

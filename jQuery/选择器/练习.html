@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../jquery.js"></script>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        li{
+            list-style: none;
+            width:100px;
+            height:100px;
+            background-color:red;
+            margin:10px;
+            float:left;
+        }
+    </style>
+</head>
+<body>
+    <h1>11111</h1>
+    <span>22222</span>
+    <p>33333</p>
+    <strong>44444</strong>
+    <div class="dd">55555</div>
+    <script>
+        $('h1,span,p,strong,div.dd').click(function(){
+            $(this).css({"color":"red"});
+        })
+    </script>
+</body>
+</html>
